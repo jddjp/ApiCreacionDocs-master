@@ -1,0 +1,113 @@
+﻿
+@model ApiCreacionDocs.Models.InformacionDocs.InputPagare;
+<!doctype html>
+<html>
+<head>
+    <style>
+        p.b {
+            font-family: Arial;
+            font-size: 14px;
+        }
+
+        p.negrita {
+            font-family: Arial;
+            font-weight: bold;
+        }
+
+        font.l {
+            font-weight: bold;
+        }
+
+        font.z {
+            text-align: right;
+        }
+    </style>
+    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+</head>
+
+<body style="text-align: justify;">
+    <p align="center">SIN PROTESTO</p>
+    <p align="center"><b>P A G A R É</b></p>
+    <p align="left">NÚMERO DE CONTRATO: <U><b>@Model.NumeroContrato</b></U></p>
+    <p style="margin:0;display:inline;float:left">NUMERO DE PAGARE: <u><b>@Model.NumeroPagare</b></u></p>
+    <p style="margin:0;display:inline;float:right">BUENO POR $ <U><b>@Model.Cantidadpagare</b></U></p>
+    <br />
+    <p class="b">
+        <font>
+            POR ESTE PAGARE, DEBO, PROMETO Y ME OBLIGO A PAGAR EN FORMA INCONDICIONAL A LA ORDEN
+            DE LA PERSONA MORAL DENOMINADA FOMEPADE S.A.P.I. DE C.V. SOFOM E.N.R. O A QUIEN SUS DERECHOS REPRESENTE EN SU DOMICILIO UBICADO
+            EN <font class="l"><ins>BOULEVARD ATLIXCO NO. 3115 INTERIOR 1</ins></font> DE LA COLONIA <u><b>NUEVA ANTEQUERA C.P. 72180</b></u> DE LA CIUDAD DE
+            <u><b>PUEBLA PUEBLA MEXICO</b></u>. Y/O EN SU DOMICILIO UBICADO EN: <u><b>@Model.DireccionEmite</b></u> COLONIA
+            <u><b>@Model.ColoniaEmite</b></u> DE LA CIUDAD DE <u><b>@Model.CiudadEmite,@Model.PaisEmite</b></u> LA CANTIDAD EN EFECTIVO DE <u>
+                <b>
+                    @Model.CantidadpagareNumLetras
+                </b>
+            </u>LO CUAL HARE MEDIANTE <u><b>@Model.NumAmortizaciones</b></u> PAGOS
+            <u><b>@Model.PagosPeridicidad</b></u> Y CONSECUTIVOS, CADA UNO DE ELLOS POR LA CANTIDAD DE
+            <u>
+                <b>
+                    @Model.CantidadPagosnumeroyletras
+                </b>
+            </u>
+            INICIANDO EL PRIMER PAGO, A PARTIR DEL DIA <u><b>@Model.DiaPrimerPago</b></u> DEL MES DE <u><b>@Model.MesPrimerPago</b></u> DEL AÑO <u><b>@Model.AnioPrimerpago</b></u> Y VENCIENDO EL
+            ULTIMO PAGO EL DÍA <u><b>@Model.DiaUltimoPago</b></u> DEL MES DE <u><b>@Model.MesUltimoPago</b></u> DEL AÑO <u><b>@Model.AnioUltimoPago</b></u>.
+        </font>
+    </p>
+    <p class="b">
+        VALOR RECIBIDO EN MONEDA NACIONAL A MI ENTERA SATISFACCIÓN Y CONFORMIDAD. ASÍ MISMO, DE
+        MANERA EXPRESA ME COMPROMETO A QUE ESTE PAGARE CAUSARÁ INTERESES ORDINARIOS A RAZÓN
+        DEL <u><b>@Model.TasaOrdinaria</b></u> POR CIENTO ANUAL, POR CADA MES O FRACCIÓN, LOS CUALES DEBERÉ PAGAR
+        CONJUNTAMENTE CON EL CAPITAL ADEUDADO.
+    </p>
+    <p class="b">
+        DE IGUAL FORMA, ME COMPROMETO A QUE EN CASO DE INCUMPLIMIENTO EN EL PAGO DE UNA O MAS
+        DE LAS AMORTIZACIONES CONVENIDAS, A PAGAR LOS INTERESES MORATORIOS QUE SE GENEREN A
+        PARTIR DE LA FECHA DEL INCUMPLIMIENTO Y HASTA QUE EL ADEUDO SEA TOTALMENTE PAGADO A
+        FOMEPADE S.A.P.I. DE C.V. SOFOM E.N.R. LOS CUALES SE CAUSARAN SOBRE EL CAPITAL VENCIDO Y
+        SERÁN CALCULADOS A UNA TASA DE INTERÉS MORATORIO DEL <u><b>@Model.TasaMoratoria</b></u> POR CIENTO MENSUAL, POR
+        CADA MES O FRACCIÓN, LOS CUALES DEBO( PAGAR CONJUNTAMENTE CON LAS AMORTIZACIONES DE
+        CAPITAL VENCIDO.
+    </p>
+    <div>
+        <p class="b">
+            QUEDA EXPRESAMENTE CONVENIDO QUE LA FALTA DE PAGO OPORTUNO DE UNO O MAS DE LOS
+            PAGOS CONVENIDOS DARA DERECHO A FOMEPADE SAPI DE CV SOFOM ENR A DAR POR VENCIDO
+            EN FORMA ANTICIPADA EL PLAZO CONVENIDO Y A EXIGIR YA SEA POR LA VÍA EXTRAJUDICIAL O
+            JUDICIAL EL PAGO DEL TOTAL DE LA DEUDA EXISTENTE Y SUS ACCESORIOS GENERADOS LO
+            ANTERIOR DE CONFORMIDAD CON LO DISPUESTO POR LOS ARTÍCULOS 79 EN RELACIÓN CON EL 174 DE
+            LA LEY GENERAL DE TITULOS Y OPERACIONES DE CRÉDITO.
+        </p>
+    </div>
+    <p class="b">
+        DE IGUAL FORMA SE CONVIENE, QUE TODOS LOS ABONOS QUE REALICE EL SUSCRIPTOR DEL PRESENTE PAGARE,
+        DEBERÁN ESTAR AMPARADOS EN TODOS LOS CASOS, POR EL DESCUENTO DEL CRÉDITO EN LA NÓMINA DEL ACREDITADO,
+        AVAL O SOLIDARIO RESPONSABLE, MISMO QUE ESTE DEBIDAMENTE CUBIERTO A LA FINANCIERA “FOMEPADE S.A.P.I. DE C.V.
+        SOFOM E.N.R.” POR PARTE DE LA ENTIDAD O DEPENDENCIA RETENEDORA, POR EL RECIBO OFICIAL QUE EXPIDA FOMEPADE
+        S.A.P.I. DE C.V. SOFOM E.N.R. O EL DEPÓSITO RECIBIDO EN SU CUENTA BANCARIA EN SU FAVOR, DE LO CONTRARIO NO
+        PODRÁN SER RECONOCIDOS COMO TALES.
+    </p>
+    <p class="b">
+        LAS PARTES CONVIENEN EN FORMA EXPRESA, QUE EN CASO DE QUE FOMEPADE S.A.P.I. DE C.V. SOFOM E.N.R. INICIE
+        ACCIONES JUDICIALES PARA RECUPERAR EL IMPORTE DEL PRESENTE PAGARE, ASÍ COMO POR CUALQUIER OTRA
+        CONTROVERSIA QUE LLEGARE A SURGIR, EXPRESAMENTE SE SOMETEN A LOS TRIBUNALES COMPETENTES DE LA CIUDAD
+        DE <u><b>@Model.CiudadEmite</b></u> RENUNCIANDO EL SUSCRIPTOR Y SU AVAL SI LO HUBIERE, A CUALQUIER OTRO DOMICILIO O
+        FUERO QUE PUDIERE CORRESPONDERLES POR RAZÓN DE SUS DOMICILIOS PRESENTES O FUTUROS.
+
+    </p>
+    <br />
+    <p class="b"> EL PRESENTE PAGARE SE SUSCRIBE EN LA CIUDAD DE <u><b>@Model.PersonaCiudad</b></u>, EL DÍA <u><b>@DateTime.Now.ToString("dd")</b></u> DEL MES DE <u><b>@DateTime.Now.ToString("MMMM").ToUpper()</b></u> DEL</p>
+    <p class="b">AÑO <U><b>@DateTime.Now.ToString("yyyy")</b></U>.</p>
+    <br />
+    <p class="b">NOMBRE Y FIRMA DEL SUSCRIPTOR Y/O DEUDOR:</p>
+    <br />
+    <p class="b">
+        FIRMA:<U><b>___________________</b></U><br />
+        NOMBRE: <U><b>@Model.PersonaNombre</b></U><br />
+        DOMICILIO:<U><b>@Model.PersonaDomicilio</b></U><br />
+        COLONIA O FRACCIONAMIENTO:<U><b>@Model.PersonaColonia</b></U><br />
+        CIUDAD:<U><b>@Model.PersonaCiudad</b></U><br />
+        TELÉFONO(S):<U><b>@Model.PersonaTelefono</b></U> Y <U><b>@Model.PersonaTelefono</b></U>
+    <p />
+
+</body>
+</html>
