@@ -1,10 +1,10 @@
-﻿
+﻿@model ApiCreacionDocs.Models.InformacionDocs.InputSolicitud;
 <html>
 <head>
     <style>
         p.b {
             font-family: Arial;
-            font-size: 9px;
+            font-size: 10px;
         }
 
         p.negrita {
@@ -24,7 +24,7 @@
             border: 1px solid black;
         }
 
-        table.data, td.data, th {
+        table.data, td.data, th.data {
             border: 1px solid black;
         }
 
@@ -47,10 +47,15 @@
         }
     </style>
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+
+
 </head>
 
 <body style="text-align: justify;">
-
+    @*<p align="right" class="b">
+            No.Cliente:<br />
+            No.Contrato:
+        </p>*@
     <p class="b" align="center" style="width:950px;background-color:#E6E6E6;">DATOS DEL CRÉDITO</p>
     <table>
         <tr>
@@ -60,7 +65,7 @@
                 </p>
             </td>
             <td style="width:200px;">
-                <p class="b" align="center"><b><u>EN CUENTA CORRIENTE</u></b></p>
+                <p class="b" align="center"><b><u>@Model.TipoCredito</u></b></p>
             </td>
             <td>&nbsp;</td>
             <td style="width:200px;">
@@ -83,18 +88,25 @@
     <table>
         <tr style="height:5px;">
             <td style="width:100px;">
-                <p class="b">JESUS</p>
+                <p class="b">
+                    JESUS<BR>______________________<BR>
+                    NOMBRE(S)
+                </p>
             </td>
             <td>
-                <p class="b">RAMOS</p>
+                <p class="b">
+                    RAMOS<BR>______________________<BR>
+                    APELLIDO PATERNO
+                </p>
             </td>
             <td style="width:100px;">
-                <p class="b">lOPEZ</p>
+                <p class="b">
+                    lOPEZ<BR>______________________<BR>
+                    APELLIDO MATERNO
+                </p>
             </td>
             </td>
-            <td style="width:250px;">
-                <p class="b">lOPEZ</p>
-            </td>
+
             <td style="width:50px;">
                 <p class="b">SEXO</p>
             </td>
@@ -914,8 +926,7 @@
                 </td>
             </tr>
         </table>
-        <br />
-        <br />
+
         <p class="b" align="center" style="width:950px;background-color:#E6E6E6;">
             FORMA DE ENTREGA DE RECURSOS
         </p>
@@ -967,19 +978,18 @@
             <tr>
                 <td style="width:250px;">
                     <p class="b">
-                        [  ]  OTRO
+                        [  ]  OTRO_________________________
                     </p>
                 </td>
-                <td style="width:250px;">
-                    <p class="b">
-                        _______________________________
-                    </p>
-                </td>
+                @*<td style="width:250px;">
+                        <p class="b">
+                            _______________________________
+                        </p>
+                    </td>*@
             </tr>
         </table>
         <br />
-        <br />
-        <br />
+
         <table class="data">
             <tr>
                 <th width="400px" style="background-color:#E6E6E6;">
@@ -1033,11 +1043,10 @@
             <tr>
                 <td width="200px">
                     <p align="left" class="b">
-                        ¿DECLARA USTED QUE LAS OPERACIONES REALIZADAS CON LA INSTITUCION SON REALIZADAS POR CUENTA PROPIA Y QUE NO OPERA
-                        A NOMBRE DE NINGÚN TERCERO YA SEA PERSONA FÍSICA O MORAL?
+                        ¿ES USTED O TIENE RELACIÓN DE PARENTESCO CON ALGÚN FUNCIONARIO PÚBLICO NACIONAL O EXTRANJERO EN FUNCIONES O QUE EJERCIÓ FUNCIONES EN LOS ULTIMOS 12 MESES?
                     </p>
                     <p align="left" width="100px" class="b">
-                        EN CASO DE NEGATIVA, INDICAR AL PROPIETARIO REAL DE LOS RECURSOS: _______________________________________
+                        EN CASO AFIRMATIVO INDICAR LO SIGUIENTE:
                     </p>
                     <br>
                 </td>
@@ -1133,8 +1142,7 @@
             <tr>
                 <td>
                     <p align="left" class="b">
-                        POR ESTE CONDUCTO AUTORIZO EXPRESAMENTE A FOMEPADE, S.A.P.I. DE C.V SOFOM, E.N.R., PARA QUE POR CONDUCTO DE SUS FUNCIONARIOS FACULTADOS LLEVE A
-                        CABO INVESTIGACIONES, SOBRE MI COMPORTAMIENTO CREDITICIO O EL DE LA EMPRESA QUE REPRESENTO EN TRANS UNION DE MÉXICO, S. A. SIC Y/O DUN &
+                        POR ESTE CONDUCTO AUTORIZO EXPRESAMENTE A FOMEPADE, S.A.P.I. DE C.V SOFOM, E.N.R., PARA QUE POR CONDUCTO DE SUS FUNCIONARIOS FACULTADOS LLEVE A CABO INVESTIGACIONES, SOBRE MI COMPORTAMIENTO CREDITICIO O EL DE LA EMPRESA QUE REPRESENTO EN TRANS UNION DE MÉXICO, S. A. SIC Y/O DUN &
                         BRADSTREET, S.A. SIC. ASIMISMO, DECLARO QUE CONOZCO LA NATURALEZA Y ALCANCE DE LAS SOCIEDADES DE INFORMACIÓN CREDITICIA Y DE LA INFORMACIÓN
                         CONTENIDA EN LOS REPORTES DE CRÉDITO Y REPORTE DE CRÉDITO ESPECIAL; DECLARO QUE CONOZCO LA NATURALEZA Y ALCANCE DE LA INFORMACIÓN QUE SE
                         SOLICITARÁ, DEL USO QUE FOMEPADE, S.A.P.I. DE C.V SOFOM, E.N.R, HARÁ DE TAL INFORMACIÓN Y DE QUE ÉSTA PODRÁ REALIZAR CONSULTAS PERIÓDICAS SOBRE MI
@@ -1233,9 +1241,7 @@
                     <br>
                     <br>
                     <br>
-                    <br>
-                    <br>
-                    <br>
+
                     <br>
                     <p align="center" class="b"><u>JESUS RAMOS LOPEZ</u></p>
                     <p align="center" class="b">
@@ -1276,8 +1282,7 @@
                     <br>
                     <br>
                     <br>
-                    <br>
-                    <br>
+
                     <br>
                     <p align="center" class="b">
                         JESUS RAMOS LOPEZ
@@ -1290,811 +1295,228 @@
             </tr>
 
         </table>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+        <br />
+        <br />
+        <br />
+        <br />
         <table class="data">
             <tr>
-
                 <th width="900px" style="background-color:#E6E6E6;">
                     <p align="center" class="b">
-                        INFORMACIÓN Y PRESUPUESTO DE LA SOLUCIÓN DE VIVIENDA A REALIZAR
+                        AUTORIZACIÓN PARA DOMICILIACIÓN DE RECIBOS
                     </p>
                 </th>
 
             </tr>
 
         </table>
-    </table>
+        <table class="s">
 
-    <table class="data">
-        <tr>
+            <tr class="s">
+                <td width="50%" class="s">
+                    <p align="left" class="b">
+                        EMISOR (NOMBRE O RAZÓN SOCIAL) FOMEPADE S.A.P.I. DE C.V. SOFOM E.N.R.
+                    </p>
+                </td>
+                <td class="s">
+                    <p align="left" class="b">
+                        NÚM. PAGARE: 2220028840
+                    </p>
+                </td>
 
-            <td width="900px">
+
+            </tr>
+            <td colspan="2" class="s">
                 <p align="left" class="b">
-                    <b>
-                        ¿QUÉ TIPO DE MEJORAMIENTO O AMPLIACIÓN HARÁS EN TU VIVIENDA?
-                    </b>
-                </p>
-                <p align="left" class="b">
-                    <b>
-                        EN INTERIOR:
+                    CONCEPTO DEL CRÉDITO<br><b>
+                        CRÉDITO OTORGADO DEL PRODUCTO APRECIA TU NÓMINA DE FECHA ( 10 /FEBRERO/2020 ) CON FECHA DE VENCIMIENTO ( 15/AGOSTO/2021 ) A 36 PAGOS
+                        QUINCENALES POR UN IMPORTE DE $ 2,081.22 (DOS MIL OCHENTA Y UNO PESOS CON 22/100 M.N.)
                     </b>
                 </p>
             </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
 
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
+
+
+            </tr>
+            <tr class="s">
+                <td class="s">
+                    <p align="left" class="b">
+                        BANCO RECEPTOR DONDE RESIDE LA CUENTA BANCARIA (RAZÓN SOCIAL)
+                    </p>
+                    <p align="left" class="b">
+                    </p>
+                    <p align="left" class="b">
+                        <b>Banorte</b>
+                    </p>
+                </td>
+                <td class="s">
+                    <table class="s">
+                        <tr>
+                            <td colspan="15"><p class="b">NUMERO DE CLABE</p></td>
+                        </tr>
+                        <tr>
+                            <td width="30" class="s" height="30"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                        </tr>
+                        <tr width="200px">
+                            <td colspan="15"><p class="b">TELÉFONO MOVIL ASOCIADO</p></td>
+
+                        </tr>
+                        <tr>
+                            <td width="30" class="s" height="30"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="15"><p class="b">NUMERO DE TARJETA DE </p></td>
+
+                        </tr>
+                        <tr>
+                            <td width="30" class="s" height="30"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                            <td width="50" class="s"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="15"><p class="b">AQUEL QUE LO SUSTITUYA PARA EL CASO DE REPOSICIÓN O REPORTE POR ROBO O EXTRAVÍO</p></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table class="s">
             <td>
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] Baño
-                    </b>
+                <p class="b">
+                    "AUTORIZO AL BANCO RECEPTOR PAR QUE REALICE POR MI CUENTA LOS PAGOS POR LOS CONCEPTOS QUE EN ESTE DOCUMENTO SE DETALLAN, CON CARGO A LA CUENTA BANCARIA IDENTIFICADA POR LA CLABE O NUMERO DE TARJETA DE DEBITO INDICADO AL RUBRO. CONVENGO EN QUE EL BANCO RECEPTOR QUEDA LIBERADO DE TODA RESPONSABILIDAD SI EL EMISOR EJERCITARA ACCIONES CONTRA MI, DERIVADOS DE LA LEY O EL CONTRATO QUE TENGAMOS CELEBRADO, Y QUE EL BANCO RECEPTOR NO ESTARÁ OBLIGADO A EFECTUAR NINGUNA RECLAMACIÓN AL EMISOR; NI A IMPONER RECURSOS DE NINGUNA ESPECIE CONTRA MULTAS, SANCIONES O COBROS INDEBIDOS, TODO LO CUAL, EN CASO DE SER NECESARIO, SERA EJECUTADO POR MI. EL BANCO RECEPTOR TAMPOCO SERA RESPONSABLE SI EL EMISOR NO ENTREGA OPORTUNAMENTE LOS COMPROBANTES DE SERVICIOS, O SI LOS PAGOS SE REALIZAN EXTEMPORÁNEAMENTE POR RAZONES AJENAS AL BANCO RECEPTOR, EL CUAL TENDRÁ ABSOLUTA LIBERTAD DE CANCELARME ESTE SERVICIO SI EN MI CUENTA NO EXISTEN FONDOS SUFICIENTES PARA CUBRIR UNO O MAS DE LOS PAGOS QUE LE REQUIERA EL EMISOR, O BIEN, ESTA ESTUVIERA BLOQUEADA POR ALGÚN MOTIVO.<br>
+                    ESTOY ENTERADO DE QUE EN CUALQUIER MOMENTO PODRE SOLICITAR LA CANCELACIÓN DE LA PRESENTE DOMICILIACIÓN SIN COSTO A MI CARGO"
                 </p>
             </td>
 
-            <td>
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] Sala
-                    </b>
-                </p>
-            </td>
-
-            <td>
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] Piso
-                    </b>
-                </p>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] RECAMARA
-                    </b>
-                </p>
-            </td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  COCINA
-                    </b>
-                </p>
-            </td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] PINTURA
-                    </b>
-                </p>
-            </td>
-            <td></td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-
-                <p align="left" class="b">
-                    <b>
-                        EN EXTERIOR:
-
-                    </b>
-                </p>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] FACHADA
-                    </b>
-                </p>
-            </td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  PAVIMENTO Y PISO
-                    </b>
-                </p>
-            </td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  PUERTA
-                    </b>
-                </p>
-            </td>
-
-            <td></td>
-
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] PINTURA
-                    </b>
-                </p>
-            </td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  TECHO
-                    </b>
-                </p>
-            </td>
-
-            <td width="600px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] otro_____________
-                    </b>
-                </p>
-            </td>
-            <td></td>
-
-
-        </tr>
-        <tr>
-            <td>
-                <br><p align="left" class="b">
-                    <b>
-                        EL PRESUPUESTO DE TU MEJORA INCLUYE MATERIALES Y MANO DE OBRA:
-
-                    </b>
-                </p><br>
-            </td>
-            <td>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] CEMENTO, CAL, VARILLA, ALAMBRE, OTROS
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  MUEBLES DE BAÑO
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]   MATERIAL DE PLOMERIA
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]   MATERIAL ELÉCTRICO
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  PINTURA
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] HERRERÍA Y CANCELERÍA
-
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  MANO DE OBRA
-
-
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  < 5,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 5,000-10,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  10,000-15,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ] 15,000-20,000
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        [ ]  > 20,000
-                    </b>
-                </p>
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <br>
-                <p align="left" class="b">
-                    <b>
-                        PRESUPUESTO DE LA MEJORA:
-
-
-                    </b>
-                </p>
-            </td>
-            <td width="900px">
-            </td>
-            <td width="900px">
-                <br>
-                <p align="left" class="b">
-                    <b>
-
-                        $ 40,000.00
-
-                    </b>
-                </p>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td>
-            </td>
-            <td>
-            </td>
-
-            <td>
-            </td>
-            <td>
-                <br>
-                <br>
-                <br>
-                <p align="left" class="b">
-                    JESUS RAMOS LOPEZ
-                </p>
-                <p align="left" class="b">
-                    NOMBRE COMPLETO Y FIRMA DE "EL ACREDITADO"
-                </p>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br />
-    <br>
-    <br>
-    <br>
-    <br>
-    <br />
-    <br>
-    <br>
-    <br>
-    <br>
-    <br />
-    <br>
-
-    <table class="data">
-        <tr>
-
-            <th width="900px" style="background-color:#E6E6E6;">
-                <p align="center" class="b">
-                    AUTORIZACIÓN PARA DOMICILIACIÓN DE RECIBOS
-                </p>
-            </th>
-
-        </tr>
-
-    </table>
-    <table class="s">
-
-        <tr class="s">
-            <td class="s">
-                <p align="left" class="b">
-                    EMISOR (NOMBRE O RAZÓN SOCIAL) FOMEPADE S.A.P.I. DE C.V. SOFOM E.N.R.
+        </table>
+        <table class="s ">
+            <td width="50%" height="30" class="s">
+                <p class="b">
+                    FECHA (DD/MM/AAAA):
                 </p>
             </td>
             <td class="s">
-                <p align="left" class="b">
-                    NÚM. PAGARE: 2220028840
+                <p class="b">
+                    FIRMA DEL CLIENTE USUARIO TITULAR DE LA CUENTA BANCARIA
                 </p>
             </td>
 
+        </table>
+        <br>
+        <br>
+        <table class="data">
+            <tr>
 
-        </tr>
-        <td class="s">
-            <p align="left" class="b">
-                CONCEPTO DEL CRÉDITO<br><b>
-                    CRÉDITO OTORGADO DEL PRODUCTO APRECIA TU NÓMINA DE FECHA ( 10 /FEBRERO/2020 ) CON FECHA DE VENCIMIENTO ( 15/AGOSTO/2021 ) A 36 PAGOS
-                    QUINCENALES POR UN IMPORTE DE $ 2,081.22 (DOS MIL OCHENTA Y UNO PESOS CON 22/100 M.N.)
-                </b>
-            </p>
-        </td>
-        <td class="s">
-            <p align="left" class="b">
-            </p>
-        </td>
+                <th width="900px" style="background-color:#E6E6E6;">
+                    <p align="center" class="b">
+                        AVISO DE PRIVACIDAD
+                    </p>
+                </th>
+
+            </tr>
+            <tr>
+                <td width="900px">
+                    <p align="right" class="b"><b> BLVD. ATLIXCO NO. 3115, INT. 1, COL. NUEVA ANTEQUERA, PUEBLA, PUE. C.P. 72180.</b></p>
+                    <p align="left" class="b">
+                        EN ATENCIÓN A LAS DISPOSICIONES ESTABLECIDAS EN LA LEY FEDERAL DE PROTECCIÓN DE DATOS EN POSESIÓN DE LOS PARTICULARES Y DEMÁS RELACIONADAS, LOS DATOS PERSONALES QUE A USTED PERTENEZCAN Y QUE OBREN EN PODER DE DE <b>FOMEPADE S.A.P.I. DE C.V. SOFOM ENR Y/O APRECIA FINANCIERA,</b> SUS EMPRESAS AFILIADAS O PERTENECIENTES AL MISMO GRUPO EMPRESARIAL, SE TRATARÁN AL TENOR DE LA LEGISLACIÓN EN LA MATERIA. ASIMISMO, LE INFORMAMOS LO SIGUIENTE:<br> <b>APRECIA FINANCIERA</b> ES RESPONSABLE DE RECABAR, USAR Y PROTEGER SUS DATOS PERSONALES, DERIVADOS DEL PROCESO LEGAL Y/O CONTRACTUAL CON CLIENTES Y
+                        PROVEEDORES POR LO QUE SE COMPROMETE A QUE ESTOS DATOS SERÁN TRATADOS BAJO LAS MÁS ESTRICTAS MEDIDAS DE SEGURIDAD QUE GARANTICEN SU
+                        CONFIDENCIALIDAD. ENTRE LOS DATOS QUE SE PODRÍAN SOLICITAR SON LOS SIGUIENTES: NOMBRE, DOMICILIO, RFC, MAIL, TELÉFONO FIJO Y CELULAR, CURP,
+                        INFORMACIÓN LABORAL, INFORMACIÓN PATRIMONIAL, EDAD Y REDES SOCIALES ENTRE OTROS.<br>
+                        SUS DATOS PERSONALES EN NUESTRA POSESIÓN, TIENEN COMO FINALIDAD PRINCIPAL LA DE IDENTIFICACIÓN, LOCALIZACIÓN Y CONTACTO CON EL TITULAR, LA ADECUADA
+                        REALIZACIÓN DE LAS OPERACIONES Y OTORGAMIENTO DE CRÉDITOS E INVERSIONES, ASÍ COMO PARA LA CELEBRACIÓN DE LOS DEMÁS ACTOS QUE EL RESPONSABLE PUEDE
+                        REALIZAR CONFORME A LA LEY Y SUS ESTATUTOS SOCIALES; FACTURACIÓN, COBRANZA COMERCIAL, PROSPECCIÓN Y ATENCIÓN REFERENTE A NUESTROS SERVICIOS.<br>
+                        <b>TRANSFERENCIA.-</b> SE HACE DE SU CONOCIMIENTO QUE SUS DATOS PERSONALES PODRÁN SER TRANSFERIDOS Y TRATADOS DENTRO Y FUERA DEL PAÍS, POR PERSONAS
+                        DISTINTAS A DE <b>APRECIA FINANCIERA</b>, BRINDANDO EN ESTE CASO LOS DATOS INDISPENSABLES PARA UNA ACTIVIDAD O SERVICIO ESPECÍFICO; ASEGURADORAS;
+                        MARKETING, DESPACHOS EXTERNOS DE COBRANZA, ADMINISTRADORES DE FACTURACIÓN Y COBRANZA Y; A LAS AUTORIDADES COMPETENTES, LOCALES Y FEDERALES ,
+                        ÚNICA Y EXCLUSIVAMENTE CUANDO SE ENCUENTRE DENTRO DE LAS EXCEPCIONES SEÑALADAS EN LA LEY Y SU REGLAMENTO. SI USTED NO MANIFIESTA SU OPOSICIÓN
+                        PARA QUE SUS DATOS PERSONALES SEAN TRANSFERIDOS, SE ENTENDERÁ QUE HA OTORGADO SU CONSENTIMIENTO PARA ELLO.<br>
+                        DATOS PERSONALES SENSIBLES. - PARA CUMPLIR CON LAS FINALIDADES PREVISTAS EN ESTE AVISO DE PRIVACIDAD EN ALGUNOS CASOS PODRÁN SER RECABADOS Y
+                        TRATADOS <b>DATOS PERSONALES SENSIBLES,</b> TALES COMO INFORMACIÓN BANCARIA Y/O PATRIMONIAL.<br>
+                        <b>DERECHOS ARCO, REVOCACIÓN DE CONSENTIMIENTO Y LIMITACIÓN Y/O DIVULGACIÓN DE SUS DATOS.</b>- CABE SEÑALAR QUE USTED O SU REPRESENTANTE, TENDRÁ EN
+                        CUALQUIER TIEMPO EL DERECHO DE ACCEDER, RECTIFICAR, CANCELAR Y OPONERSE AL TRATAMIENTO DE SUS DATOS PERSONALES, ASÍ COMO REVOCAR SU
+                        CONSENTIMIENTO AL TRATAMIENTO DE LOS MISMOS Y PODRÁ LIMITAR EL USO O DIVULGACIÓN DE SUS DATOS PERSONALES, PARA LO CUAL DEBERÁ HACERSE POR ESCRITO,
+                        DIRIGIDO AL <b>DR. SAMUEL RANGEL RODRÍGUEZ</b>, AL CORREO ELECTRÓNICO: <b style="color:blue" ;>SAMUEL.RANGEL@DATOSPERSONALESMEXICO.COM</b>QUIEN A SU VEZ LE COMUNICARÁ AL TITULAR EN UN PLAZO MÁXIMO DE VEINTE DÍAS, CONTADOS DESDE LA FECHA EN QUE SE RECIBIÓ LA SOLICITUD, LA DETERMINACIÓN ADOPTADA Y EN CASO DE QUE RESULTARA PROCEDENTE, SE HARÁ EFECTIVA DENTRO DE LOS QUINCE DÍAS SIGUIENTES A LA FECHA EN QUE SE COMUNICA LA RESPUESTA.<br>
+                        <b>APRECIA FINANCIERA</b> GRABA VIDEOS, TOMA FOTOGRAFÍAS DE LOS EVENTOS QUE REALIZA, SI USTED INGRESA O TRANSITA POR LAS OFICINAS DE LA EMPRESA ACEPTA QUE
+                        PODRÁ SER GRABADO Y/O FOTOGRAFIADO POR RAZONES DE SEGURIDAD. PARA PROTEGER LOS DATOS PERSONALES QUE RECIBA <b>APRECIA FINANCIERA</b>, ÉSTE HA
+                        ESTABLECIDO MEDIDAS DE SEGURIDAD TANTO ADMINISTRATIVAS Y TÉCNICAS COMO FÍSICAS, SEGÚN SEA MÁS APROPIADO DE ACUERDO AL TIPO DE DATOS PERSONALES EN
+                        CUESTIÓN Y EL TRATAMIENTO AL QUE ESTÁN SUJETOS.
+                        <b>APRECIA FINANCIERA</b> SE RESERVA EL DERECHO DE EFECTUAR MODIFICACIONES O ACTUALIZACIONES EN CUALQUIER MOMENTO AL TEXTO DEL PRESENTE AVISO DE
+                        PRIVACIDAD, PARA INCLUIR INFORMACIÓN DE MODIFICACIONES A LAS LEYES APLICABLES Y SU REGLAMENTO. EN CASO DE CAMBIOS AL AVISO DE PRIVACIDAD ÉSTOS SE
+                        HARÁN SABER A LOS TITULARES EN LA PÁGINA WEB <b style="color:blue" ;>http://WWW.APRECIA.COM.MX/AVISO-DE-PRIVACIDAD/</b> , POR LO CUAL LE PEDIMOS LA REVISE DE MANERA
+                        PERIÓDICA.<br> DERIVADO DE LO ANTERIOR, EL TITULAR DE LOS DATOS PERSONALES MANIFIESTA LO SIGUIENTE:<br>
+                        [ ] CONSIENTO QUE TODOS MIS DATOS PERSONALES, SEAN TRATADOS CONFORME AL PRESENTE AVISO DE PRIVACIDAD.<br>
+                    </p>
+                    <p align="left" class="b">NOMBRE, FECHA Y FIRMA 10/FEBRERO/2020 </p>
 
 
-        </tr>
-        <tr class="s">
-            <td class="s">
-                <p align="left" class="b">
-                    BANCO RECEPTOR DONDE RESIDE LA CUENTA BANCARIA (RAZÓN SOCIAL)
-                </p>
-                <p align="left" class="b">
-                </p>
-                <p align="left" class="b">
-                    BANORTE
-                </p>
-            </td>
-            <td class="s">
-                <p align="left" class="b">
-                </p>
-            </td>
-        </tr>
-    </table>
+                </td>
 
-    <table class="data">
-        <tr>
 
-            <th width="900px" style="background-color:#E6E6E6;">
-                <p align="center" class="b">
-                    AVISO DE PRIVACIDAD
-                </p>
-            </th>
+            </tr>
+            <tr>
 
-        </tr>
-        <tr>
+                <td><p align="right" class="b">Última actualización: julio 2019</p></td>
+            </tr>
+        </table>
 
-            <th width="900px">
-                <p align="right" class="b"> BLVD. ATLIXCO NO. 3115, INT. 1, COL. NUEVA ANTEQUERA, PUEBLA, PUE. C.P. 72180.</p>
-                <p align="left" class="b">
-                    EN ATENCIÓN A LAS DISPOSICIONES ESTABLECIDAS EN LA LEY FEDERAL DE PROTECCIÓN DE DATOS EN POSESIÓN DE LOS PARTICULARES Y DEMÁS RELACIONADAS, LOS DATOS
-                    PERSONALES QUE A USTED PERTENEZCAN Y QUE OBREN EN PODER DE DE FOMEPADE S.A.P.I. DE C.V. SOFOM ENR Y/O APRECIA FINANCIERA, SUS EMPRESAS AFILIADAS O
-                    PERTENECIENTES AL MISMO GRUPO EMPRESARIAL, SE TRATARÁN AL TENOR DE LA LEGISLACIÓN EN LA MATERIA. ASIMISMO, LE INFORMAMOS LO SIGUIENTE:
-                    APRECIA FINANCIERA ES RESPONSABLE DE RECABAR, USAR Y PROTEGER SUS DATOS PERSONALES, DERIVADOS DEL PROCESO LEGAL Y/O CONTRACTUAL CON CLIENTES Y
-                    PROVEEDORES POR LO QUE SE COMPROMETE A QUE ESTOS DATOS SERÁN TRATADOS BAJO LAS MÁS ESTRICTAS MEDIDAS DE SEGURIDAD QUE GARANTICEN SU
-                    CONFIDENCIALIDAD. ENTRE LOS DATOS QUE SE PODRÍAN SOLICITAR SON LOS SIGUIENTES: NOMBRE, DOMICILIO, RFC, MAIL, TELÉFONO FIJO Y CELULAR, CURP,
-                    INFORMACIÓN LABORAL, INFORMACIÓN PATRIMONIAL, EDAD Y REDES SOCIALES ENTRE OTROS.
-                    SUS DATOS PERSONALES EN NUESTRA POSESIÓN, TIENEN COMO FINALIDAD PRINCIPAL LA DE IDENTIFICACIÓN, LOCALIZACIÓN Y CONTACTO CON EL TITULAR, LA ADECUADA
-                    REALIZACIÓN DE LAS OPERACIONES Y OTORGAMIENTO DE CRÉDITOS E INVERSIONES, ASÍ COMO PARA LA CELEBRACIÓN DE LOS DEMÁS ACTOS QUE EL RESPONSABLE PUEDE
-                    REALIZAR CONFORME A LA LEY Y SUS ESTATUTOS SOCIALES; FACTURACIÓN, COBRANZA COMERCIAL, PROSPECCIÓN Y ATENCIÓN REFERENTE A NUESTROS SERVICIOS.
-                    TRANSFERENCIA.- SE HACE DE SU CONOCIMIENTO QUE SUS DATOS PERSONALES PODRÁN SER TRANSFERIDOS Y TRATADOS DENTRO Y FUERA DEL PAÍS, POR PERSONAS
-                    DISTINTAS A DE APRECIA FINANCIERA, BRINDANDO EN ESTE CASO LOS DATOS INDISPENSABLES PARA UNA ACTIVIDAD O SERVICIO ESPECÍFICO; ASEGURADORAS;
-                    MARKETING, DESPACHOS EXTERNOS DE COBRANZA, ADMINISTRADORES DE FACTURACIÓN Y COBRANZA Y; A LAS AUTORIDADES COMPETENTES, LOCALES Y FEDERALES ,
-                    ÚNICA Y EXCLUSIVAMENTE CUANDO SE ENCUENTRE DENTRO DE LAS EXCEPCIONES SEÑALADAS EN LA LEY Y SU REGLAMENTO. SI USTED NO MANIFIESTA SU OPOSICIÓN
-                    PARA QUE SUS DATOS PERSONALES SEAN TRANSFERIDOS, SE ENTENDERÁ QUE HA OTORGADO SU CONSENTIMIENTO PARA ELLO.
-                    DATOS PERSONALES SENSIBLES. - PARA CUMPLIR CON LAS FINALIDADES PREVISTAS EN ESTE AVISO DE PRIVACIDAD EN ALGUNOS CASOS PODRÁN SER RECABADOS Y
-                    TRATADOS DATOS PERSONALES SENSIBLES, TALES COMO INFORMACIÓN BANCARIA Y/O PATRIMONIAL.
-                    DERECHOS ARCO, REVOCACIÓN DE CONSENTIMIENTO Y LIMITACIÓN Y/O DIVULGACIÓN DE SUS DATOS.- CABE SEÑALAR QUE USTED O SU REPRESENTANTE, TENDRÁ EN
-                    CUALQUIER TIEMPO EL DERECHO DE ACCEDER, RECTIFICAR, CANCELAR Y OPONERSE AL TRATAMIENTO DE SUS DATOS PERSONALES, ASÍ COMO REVOCAR SU
-                    CONSENTIMIENTO AL TRATAMIENTO DE LOS MISMOS Y PODRÁ LIMITAR EL USO O DIVULGACIÓN DE SUS DATOS PERSONALES, PARA LO CUAL DEBERÁ HACERSE POR ESCRITO,
-                    DIRIGIDO AL DR. SAMUEL RANGEL RODRÍGUEZ, AL CORREO ELECTRÓNICO: SAMUEL.RANGEL@DATOSPERSONALESMEXICO.COM QUIEN A SU VEZ LE COMUNICARÁ AL
-                    TITULAR EN UN PLAZO MÁXIMO DE VEINTE DÍAS, CONTADOS DESDE LA FECHA EN QUE SE RECIBIÓ LA SOLICITUD, LA DETERMINACIÓN ADOPTADA Y EN CASO DE QUE
-                    RESULTARA PROCEDENTE, SE HARÁ EFECTIVA DENTRO DE LOS QUINCE DÍAS SIGUIENTES A LA FECHA EN QUE SE COMUNICA LA RESPUESTA.
-                    APRECIA FINANCIERA GRABA VIDEOS, TOMA FOTOGRAFÍAS DE LOS EVENTOS QUE REALIZA, SI USTED INGRESA O TRANSITA POR LAS OFICINAS DE LA EMPRESA ACEPTA QUE
-                    PODRÁ SER GRABADO Y/O FOTOGRAFIADO POR RAZONES DE SEGURIDAD. PARA PROTEGER LOS DATOS PERSONALES QUE RECIBA APRECIA FINANCIERA, ÉSTE HA
-                    ESTABLECIDO MEDIDAS DE SEGURIDAD TANTO ADMINISTRATIVAS Y TÉCNICAS COMO FÍSICAS, SEGÚN SEA MÁS APROPIADO DE ACUERDO AL TIPO DE DATOS PERSONALES EN
-                    CUESTIÓN Y EL TRATAMIENTO AL QUE ESTÁN SUJETOS.
-                    APRECIA FINANCIERA SE RESERVA EL DERECHO DE EFECTUAR MODIFICACIONES O ACTUALIZACIONES EN CUALQUIER MOMENTO AL TEXTO DEL PRESENTE AVISO DE
-                    PRIVACIDAD, PARA INCLUIR INFORMACIÓN DE MODIFICACIONES A LAS LEYES APLICABLES Y SU REGLAMENTO. EN CASO DE CAMBIOS AL AVISO DE PRIVACIDAD ÉSTOS SE
-                    HARÁN SABER A LOS TITULARES EN LA PÁGINA WEB HTTP://WWW.APRECIA.COM.MX/AVISO-DE-PRIVACIDAD , POR LO CUAL LE PEDIMOS LA REVISE DE MANERA
-                    PERIÓDICA. DERIVADO DE LO ANTERIOR, EL TITULAR DE LOS DATOS PERSONALES MANIFIESTA LO SIGUIENTE:<br>
-                    [ ] CONSIENTO QUE TODOS MIS DATOS PERSONALES, SEAN TRATADOS CONFORME AL PRESENTE AVISO DE PRIVACIDAD.
-                </p>
-                <p align="left" class="b">NOMBRE, FECHA Y FIRMA 10/FEBRERO/2020 </p>
-                <p align="riht" class="b">
-                    _____________________________<br>JESUS RAMOS LOPEZ
-                </p>
-                <p align="left" class="b">ÚLTIMA ACTUALIZACIÓN: JULIO 2019</p>
-            </th>
+        <table>
+            <tr>
+                <td><p class="b">NOMBRE Y FIRMA DEL PROMOTOR:_______________________________________</p></td>
+                <td>
+                    <p class="b">
+                        CREDITO PROCEDENTE:___________SI [ ]  &nbsp;&nbsp;NO [ ]<br>
+                        NOMBRE Y FIRMA MESA DE CONTROL
+                    </p>
+                    <p class="b">
+                        CREDITO PROCEDENTE:___________SI [ ]  &nbsp;&nbsp;NO [ ]<br>
+                        NOMBRE Y FIRMA OPERACIONES/COMITE
+                    </p>
+                </td>
+            </tr>
 
-        </tr>
-
-    </table>
-
-    <table class="data">
-
-        <tr>
-            <td>
-                <p align="left" class="b">ÚLTIMA ACTUALIZACIÓN: JULIO 2019</p>
-            </td>
-            <td>
-                <p align="left" class="b">
-                    SANDRA LETICIA GONZÁLEZ RODRÍGUEZ<br>
-                    ____________________________
-                </p>
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><p align="left" class="b">NOMBRE Y FIRMA MESA DE CONTROL</p></td>
-            <td>
-                <p align="left" class="b">
-                    CRÉDITO PROCEDENTE:
-                    <br>__________________
-                </p>
-            </td>
-            <td><p align="left" class="b">SI [ ]  &nbsp;&nbsp;NO [ ]</p></td>
-        </tr>
-        <tr>
-            <td><p align="left" class="b">NOMBRE Y FIRMA MESA DE CONTROL</p></td>
-            <td><p align="left" class="b">CRÉDITO PROCEDENTE:<br>___________________</p></td>
-            <td><p align="left" class="b">SI [ ]  &nbsp;&nbsp;NO [ ]</p></td>
-        </tr>
-    </table>
+        </table>
 
 </body>
 </html>
+
+

@@ -60,9 +60,9 @@ namespace ApiCreacionDocs.Controllers
             return _documentService.GeneratePdfCaratula(/*data*/);
         }
         [ApiExplorerSettings(IgnoreApi = true)]
-        public byte[] GenerateSolicitud(/*OutputPagare data*/)
+        public byte[] GenerateSolicitud(InputData data)
         {
-            return _documentService.GeneratePdfSolicitud(/*data*/);
+            return _documentService.GeneratePdfSolicitud(data.dataSolicitud);
         }
         [ApiExplorerSettings(IgnoreApi = true)]
         public byte[] GenerateContratoConsumo(/*OutputPagare data*/)
@@ -75,6 +75,7 @@ namespace ApiCreacionDocs.Controllers
         {
             return _documentService.GeneratePdfCartaTablaAmortizacion(/*data*/);
         }
+
         //Falta Codigo de Barras
         [ApiExplorerSettings(IgnoreApi = true)]
         public byte[] GenerateReferenciaPago(InputData data)
@@ -101,11 +102,9 @@ namespace ApiCreacionDocs.Controllers
         {
             return _documentService.GeneratePdfCartaEntregaRecepcion(/*data*/);
         }
-        [ApiExplorerSettings(IgnoreApi = true)]
-        public byte[] GenerateSolicitud(InputData data)
-        {
-            return _documentService.GeneratePdfSolicitud(/*data*/);
-        }
+
+
+       
       
        
         //Almacenar Documento en el expediente del no. solicitud a la APiExpedientes
@@ -376,6 +375,11 @@ namespace ApiCreacionDocs.Controllers
             }
             if (data.dataSolicitud != null)
             {
+                //vamos obtener la solicitud
+             
+                
+                System.IO.File.WriteAllBytes("Solicitud.pdf", GenerateSolicitud(data));
+
                 var content = new MultipartFormDataContent();
                 ByteArrayContent bytes = new ByteArrayContent(GenerateSolicitud(data));
                 content.Add(new StringContent(DateTime.Now.ToShortDateString()), "Fecha_Emision");
@@ -411,12 +415,11 @@ namespace ApiCreacionDocs.Controllers
             {
                 using (var svcClient = new HttpClient())
                 {
-                   // svcClient.BaseAddress = new Uri("https://qa.adocs.aprecia.com.mx:9048/");
+
                     svcClient.DefaultRequestHeaders.Accept.Clear();
                     svcClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("multipart/form-data")); //application/json"));
 
-
-                    var response = svcClient.PostAsync("https://qa.adocs.aprecia.com.mx:9048/api/Clientes", content).Result;
+                    var response = svcClient.PostAsync("https://qa.adocs.aprecia.com.mx:9048/api/Clientes",content).Result;
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -430,8 +433,8 @@ namespace ApiCreacionDocs.Controllers
             }
             catch (Exception ex)
             {
-               
 
+                expedienteEnvioResponse.Documento_data = ex.ToString();
             }
 
 

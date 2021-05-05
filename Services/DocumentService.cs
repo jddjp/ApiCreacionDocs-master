@@ -119,13 +119,15 @@ namespace ApiCreacionDocs.Services
             return GeneratePdf(htmlContent);
         }
         //En proceso
-        public byte[] GeneratePdfSolicitud(/*OutputPagare data*/)
+        public byte[] GeneratePdfSolicitud(InputSolicitud data)
         {
-            var PagareVistaModel = GetPagareModel();
+            var PagareVistaModel = data;
             var partialName = "/Views/pdfSolicitud/Solicitud.cshtml";
             var htmlContent = _razorRendererHelper.RenderPartialToString(partialName, PagareVistaModel);
             return GeneratePdfSolicitud(htmlContent);
         }
+
+
 
         //Metodo Generador de pdfs
         private byte[] GeneratePdf(string htmlContent)

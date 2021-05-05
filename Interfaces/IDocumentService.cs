@@ -18,6 +18,6 @@ namespace ApiCreacionDocs.Interfaces
         byte[] GeneratePdfReferenciaPago(/*OutputPagare data*/);
         byte[] GeneratePdfCartaTablaAmortizacion(/*OutputPagare data*/);
         byte[] GeneratePdfCartaContrato(/*OutputPagare data*/);
-        byte[] GeneratePdfSolicitud(/*OutputPagare data*/);
+        byte[] GeneratePdfSolicitud(InputSolicitud data);
     }
 }
