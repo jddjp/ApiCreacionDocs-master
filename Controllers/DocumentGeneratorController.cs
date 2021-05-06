@@ -393,19 +393,19 @@ namespace ApiCreacionDocs.Controllers
 
                 if (data.dataSolicitud.formato == "pdf")
                 {
-                    DocsInfoSaveExpedientes.DocumentoSolicitud = EnviarExpedientes(content).URL;
+                    var doc= EnviarExpedientes(content).URL;
+                    DocsInfoSaveExpedientes.DocumentoSolicitud = doc;
                 }
                 else
                 {
-                    DocsInfoSaveExpedientes.DocumentoSolicitud = EnviarExpedientes(content).Documento_data;
+                    var doc = EnviarExpedientes(content).Documento_data;
+                    DocsInfoSaveExpedientes.DocumentoSolicitud = doc;
                 }
              
             }
             return DocsInfoSaveExpedientes;
            
         }
-
-
         //Almacenar Documentos en API Expedientes los manda y nos devuelve donde se encuentran fisica y en base64 
         [ApiExplorerSettings(IgnoreApi = true)]
         public DocumentosExpedienteCliente EnviarExpedientes(MultipartFormDataContent content)
@@ -419,7 +419,7 @@ namespace ApiCreacionDocs.Controllers
                     svcClient.DefaultRequestHeaders.Accept.Clear();
                     svcClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("multipart/form-data")); //application/json"));
 
-                    var response = svcClient.PostAsync("https://qa.adocs.aprecia.com.mx:9048/api/Clientes",content).Result;
+                    var response = svcClient.PostAsync("https://qa.adocs.aprecia.com.mx:9048/api/Clientes", content).Result;
 
                     if (response.IsSuccessStatusCode)
                     {

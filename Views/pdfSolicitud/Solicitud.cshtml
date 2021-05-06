@@ -4,7 +4,7 @@
     <style>
         p.b {
             font-family: Arial;
-            font-size: 10px;
+            font-size: 9px;
         }
 
         p.negrita {
@@ -72,13 +72,13 @@
                 <p class="b">DESTINO DEL CRÉDITO: </p>
             </td>
             <td style="width:200px;">
-                <p class="b" align="center"><b><u>CONSUMO</u></b></p>
+                <p class="b" align="center"><b><u>@Model.DestinoCredito</u></b></p>
             </td>
             <td style="width:100px;">
                 <p class="b">FECHA: </p>
             </td>
             <td style="width:100px;">
-                <p class="b" align="center"><b><u>10/FEBRERO/2020</u></b></p>
+                <p class="b" align="center"><b><u>@Model.Fecha</u></b></p>
             </td>
         </tr>
     </table>
@@ -89,19 +89,19 @@
         <tr style="height:5px;">
             <td style="width:100px;">
                 <p class="b">
-                    JESUS<BR>______________________<BR>
+                    @Model.Nombres<BR>______________________<BR>
                     NOMBRE(S)
                 </p>
             </td>
             <td>
                 <p class="b">
-                    RAMOS<BR>______________________<BR>
+                    @Model.ApellidoPaterno<BR>______________________<BR>
                     APELLIDO PATERNO
                 </p>
             </td>
             <td style="width:100px;">
                 <p class="b">
-                    lOPEZ<BR>______________________<BR>
+                    @Model.ApellidoMaterno<BR>______________________<BR>
                     APELLIDO MATERNO
                 </p>
             </td>
@@ -113,17 +113,17 @@
             <td style="width:10px;">
                 <p class="b">M</p>
             </td>
-            <td style="width:5px;"><p class="solid" align="center" style="width:15px;" class="b">X</p></td>
+            <td style="width:5px;"><p class="solid" align="center" style="width:15px;" class="b">@Model.SexoMasculino</p></td>
             <td style="width:10px;">
                 <p class="b">F</p>
             </td>
-            <td style="width:50px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:50px;"><p class="solid" align="center" style="width:15px;" class="b">@Model.SexoFemenino</p></td>
             </td>
             <td style="width:50px;">
                 <p class="b">EDAD</p>
             </td>
             <td style="width:100px;">
-                <p class="b"><b><u>52 AÑOS</u></b></p>
+                <p class="b"><b><u>@Model.Edad</u></b></p>
             </td>
         </tr>
 
@@ -133,35 +133,35 @@
         <tr>
             <td style="width:140px;">
                 <p class="b">
-                    RALJ681004UN3<br>
+                    @Model.Rfc<br>
                     _____________________<br>
                     R.F.C.
                 </p>
             </td>
             <td style="width:250px;">
                 <p class="b">
-                    04/10/1968<br>
+                    @Model.FechaNacimiento<br>
                     _____________________<br>
                     FECHA DE NACIMIENTO
                 </p>
             </td>
             <td style="height:30px;">
                 <p class="b">
-                    ZACATECAS<br>
+                    @Model.EntidadFederativaNacimiento<br>
                     _________________________<br>
                     ENTIDAD FEDERATIVA DE NACIMIENTO
                 </p>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    MÉXICO<br>
+                    @Model.PaisNacimiento<br>
                     _____________________<br>
                     PAIS DE NACIMIENTO
                 </p>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    MEXICANA<br>
+                    @Model.Nacionalidad<br>
                     _____________________<br>
                     NACIONALIDAD
                 </p>
@@ -172,21 +172,21 @@
         <tr>
             <td style="width:80px;">
                 <p class="b">
-                    RALJ681004HZSMPS06<br>
+                    @Model.Curp<br>
                     _____________________<br>
                     CURP
                 </p>
             </td>
             <td style="width:80px;">
                 <p class="b">
-                    1637046406874<br>
+                    @Model.FolioIne<br>
                     _____________________<br>
                     FOLIO I.N.E
                 </p>
             </td>
             <td style="height:30px;">
                 <p class="b">
-                    <br>
+                    @Model.ClaveElector<br>
                     _________________________<br>
                     CLAVE ELECTOR I.N.E.
 
@@ -194,30 +194,31 @@
             </td>
             <td style="width:100px;">
                 <p class="b">
-                    MÉXICO<br>
+                    @Model.CorreoEletronico<br>
                     _____________________<br>
-                    PAIS DE NACIMIENTO
+                    CORREO ELECTRONICO
                 </p>
             </td>
             <td style="width:100px;">
                 <p class="b">
-                    dejesusperezjosedaniel@gmail.com<br>
+                    @Model.PaisNacimiento<br>
                     _____________________<br>
                     PAIS DE NACIMIENTO
                 </p>
             </td>
             <td style="width:50px;">
                 <p class="b">
-                    4921048265<br>
+                    @Model.Telefono1<br>
                     _______________<br>
-                    TELÉFONO
+                    TELÉFONO<br />
+                    (NO CELULAR)
                 </p>
             </td>
             <td style="width:50px;">
                 <p class="b">
-                    4921048265<br>
+                    @Model.Telefono2<br>
                     _____________<br>
-                    TELÉFONO
+                    OTRO TELÉFONO
                 </p>
             </td>
         </tr>
@@ -226,21 +227,21 @@
         <tr>
             <td style="width:200px;">
                 <p class="b">
-                    RALJ681004HZSMPS06<br>
+                    @Model.DomicilioParticularCalleNumero<br>
                     _____________________<br>
                     DOMICILIO PARTICULAR (CALLE Y NÚMERO)
                 </p>
             </td>
             <td style="width:150px;">
                 <p class="b">
-                    1637046406874<br>
+                    @Model.Colonia<br>
                     _____________________<br>
                     COLONIA
                 </p>
             </td>
             <td style="width:150px;">
                 <p class="b">
-                    <br>
+                    @Model.CP<br>
                     ______<br>
                     C.P.
 
@@ -248,7 +249,7 @@
             </td>
             <td style="width:300px;">
                 <p class="b">
-                    VILLA DE COS, ZACATECAS, MÉXICO<br>
+                    @Model.MunicipioPoblacionEstadoPais<br>
                     _____________________<br>
                     (MUNICIPIO, POBLACIÓN, ESTADO, PAÍS)
 
@@ -266,29 +267,29 @@
             </td>
             <td style="width:50px;">
                 <p class="b">
-                    <u> 18 AÑOS</u>
+                    <u>@Model.TiempoResidencia</u>
                 </p>
             </td>
 
-            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b"> @Model.EsPropia</p></td>
             <td style="width:50px;">
                 <p class="b">
                     Propia
                 </p>
             </td>
-            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">@Model.EsRentada</p></td>
             <td style="width:50px;">
                 <p class="b">
                     Rentada
                 </p>
             </td>
-            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EsPrestada</p></td>
             <td style="width:50px;">
                 <p class="b">
                     prestada
                 </p>
             </td>
-            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">@Model.EsViveConPadres</p></td>
             <td style="width:50px;">
                 <p class="b">
                     VIVE C/PAPAS
@@ -299,13 +300,13 @@
                     LA CASA ESTA:
                 </p>
             </td>
-            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b"  @Model.EstaLibre</p></td>
             <td style="width:50px;">
                 <p class="b">
                     LIBRE
                 </p>
             </td>
-            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:25px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EstaGravada</p></td>
             <td style="width:50px;">
                 <p class="b">
                     GRAVADA
@@ -318,21 +319,21 @@
         <tr>
             <td style="width:250px;">
                 <p class="b">
-                    <br>
+                    @Model.NombreArrendador <br>
                     ______________________________<br>
                     NOMBRE DEL ARRENDADOR
                 </p>
             </td>
             <td style="width:250px;">
                 <p class="b">
-                    <br>
+                    @Model.DomicilioArrendador <br>
                     _______________________________<br>
                     DOMICILIO DEL ARRENDADOR
                 </p>
             </td>
             <td style="width:250px;">
                 <p class="b">
-                    <br>
+                    @Model.TelefonoArrendador <br>
                     _______________________________<br>
                     TELEFONO DEL ARRENDADOR
                 </p>
@@ -346,31 +347,31 @@
                     ESTADO CIVIL
                 </p>
             </td>
-            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EdoCivilSoltero</p></td>
             <td style="width:50px;">
                 <p class="b">
                     SOLTERO
                 </p>
             </td>
-            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EdoCivilCasado</p></td>
             <td style="width:50px;">
                 <p class="b">
                     CASADO
                 </p>
             </td>
-            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EdoCivilDivorciado</p></td>
             <td style="width:50px;">
                 <p class="b">
                     DIVORCIADO
                 </p>
             </td>
-            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EdoCivilUnionLibre</p></td>
             <td style="width:50px;">
                 <p class="b">
                     UNION LIBRE
                 </p>
             </td>
-            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:15px;"><p class="solid" align="center" style="width:15px;" class="b">  @Model.EdoCivilViudo</p></td>
             <td style="width:50px;">
                 <p class="b">
                     VIUDO
@@ -379,7 +380,7 @@
 
             <td style="width:250px;">
                 <p class="b">
-                    NÚMERO DE DEPENDIENTES ECONOMICOS___________
+                    NÚMERO DE DEPENDIENTES ECONOMICOS______@Model.DependientesEconomicos
                 </p>
             </td>
         </tr>
@@ -392,21 +393,21 @@
         <tr>
             <td style="width:150px;">
                 <p class="b">
-                    <br>
+                    @Model.NombreConyuge<br>
                     _____________________<br>
                     NOMBRE CONYUGE
                 </p>
             </td>
             <td style="width:150px;">
                 <p class="b">
-                    <br>
+                    @Model.ApellidoPaternoConyuge<br>
                     _____________________<br>
-                    FAPELLIDO PATERNO
+                    APELLIDO PATERNO
                 </p>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    <br>
+                    @Model.ApellidoMaternoConyuge <br>
                     _____________________<br>
                     APELLIDO MATERNO
                 </p>
@@ -414,15 +415,15 @@
             <td style="width:10px;">
                 <p class="b">M</p>
             </td>
-            <td style="width:5px;"><p class="solid" align="center" style="width:15px;" class="b">X</p></td>
+            <td style="width:5px;"><p class="solid" align="center" style="width:15px;" class="b">@Model.SexoFemeninoConyuge</p></td>
             <td style="width:10px;">
                 <p class="b">F</p>
             </td>
-            <td style="width:50px;"><p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p></td>
+            <td style="width:50px;"><p class="solid" align="center" style="width:15px;" class="b">@Model.SexoMasculinoConyuge</p></td>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    <br>
+                    @Model.EdadConyuge <br>
                     _____________________<br>
                     EDAD CONYUGE
                 </p>
@@ -434,35 +435,35 @@
         <tr>
             <td style="width:150px;">
                 <p class="b">
-                    RALJ681004UN3<br>
+                    @Model.RfcConyuge<br>
                     _____________________<br>
                     R.F.C.
                 </p>
             </td>
             <td style="width:150px;">
                 <p class="b">
-                    04/10/1968<br>
+                    @Model.FechaNacimientoConyuge<br>
                     _____________________<br>
                     FECHA DE NACIMIENTO
                 </p>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    ZACATECAS<br>
+                    @Model.EntidadFederativaNacimientoConyuge<br>
                     _____________________<br>
                     ENTIDAD FEDERATIVA DE NACIMIENTO
                 </p>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    MÉXICO<br>
+                    @Model.PaisNacimientoConyuge<br>
                     _____________________<br>
                     PAIS DE NACIMIENTO
                 </p>
             </td>
             <td style="width:200px;">
                 <p class="b">
-                    MEXICANA<br>
+                    @Model.NacionalidadConyuge<br>
                     _____________________<br>
                     NACIONALIDAD
                 </p>
@@ -473,21 +474,21 @@
         <tr>
             <td style="width:80px;">
                 <p class="b">
-                    RALJ681004HZSMPS06<br>
+                    @Model.CurpConyuge<br>
                     _____________________<br>
                     CURP
                 </p>
             </td>
             <td style="width:80px;">
                 <p class="b">
-                    1637046406874<br>
+                    @Model.FolioIneConyuge<br>
                     _____________________<br>
                     FOLIO I.N.E
                 </p>
             </td>
             <td style="height:30px;">
                 <p class="b">
-                    <br>
+                    @Model.ClaveElectorConyuge <br>
                     _________________________<br>
                     CLAVE ELECTOR I.N.E.
 
@@ -496,21 +497,21 @@
 
             <td style="width:100px;">
                 <p class="b">
-                    dejesusperezjosedaniel@gmail.com<br>
+                    @Model.CorreoEletronicoConyuge<br>
                     _____________________<br>
                     CORREO ELECTRONICO
                 </p>
             </td>
             <td style="width:50px;">
                 <p class="b">
-                    4921048265<br>
+                    @Model.Telefono1Conyuge<br>
                     _______________<br>
-                    LÉFONO (NO CELULAR)
+                    TELÉFONO (NO CELULAR)
                 </p>
             </td>
             <td style="width:50px;">
                 <p class="b">
-                    4921048265<br>
+                    @Model.Telefono2Conyuge<br>
                     _____________<br>
                     OTRO TELÉFONO
                 </p>
@@ -531,21 +532,21 @@
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.NombreReferencia1<br>
                         ___________________________<br>
                         NOMBRE COMPLETO
                     </p>
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.DomicilioReferencia1<br>
                         _____________________<br>
                         DOMICILIO
                     </p>
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.TelefonoReferencia1 <br>
                         _____________________<br>
                         TELEFONO
                     </p>
@@ -563,21 +564,21 @@
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.NombreReferencia2 <br>
                         ___________________________<br>
                         NOMBRE COMPLETO
                     </p>
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.DomicilioReferencia2<br>
                         _____________________<br>
                         DOMICILIO
                     </p>
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.TelefonoReferencia2 <br>
                         _____________________<br>
                         TELEFONO
                     </p>
@@ -585,34 +586,34 @@
             </tr>
         </table>
         <p class="b" align="center" style="width:950px;background-color:#E6E6E6;">
-            RABAJO ACTUAL DEL SOLICITANTE
+            TRABAJO ACTUAL DEL SOLICITANTE
         </p>
         <table>
             <tr>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.NombreEmpresaSolic<br>
                         _____________________<br>
                         NOMBRE DE LA EMPRESA O NEGOCIO
                     </p>
                 </td>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.ActividadGiroSolic<br>
                         _____________________<br>
                         ACTIVIDAD O GIRO
                     </p>
                 </td>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.TipoEmpleadoSolic<br>
                         _____________________<br>
                         TIPO DE EMPLEADO
                     </p>
                 </td>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.EscolaridadSolic<br>
                         _____________________<br>
                         ESCOLARIDAD
 
@@ -624,28 +625,28 @@
             <tr>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.DomicilioEmpleoSolic<br>
                         _____________________<br>
                         DOMICILIO (CALLE , NÚMERO)
                     </p>
                 </td>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.JefeInmediatoSolic<br>
                         _____________________<br>
                         JEFE INMEDIATO
                     </p>
                 </td>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.TelefonoEmpleoSolic<br>
                         _____________________<br>
                         TELÉFONO
                     </p>
                 </td>
                 <td style="width:200px;">
                     <p class="b">
-                        <br>
+                        @Model.AntiguedadEmpleoSolic<br>
                         _____________________<br>
                         ANTIGUEDAD
 
@@ -657,21 +658,21 @@
             <tr>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.IngresosMensualesEmpleoSolic<br>
                         _____________________<br>
                         INGRESOS MENSUALES COMPROBABLES
                     </p>
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.OtrosIngresosSolic <br>
                         _____________________<br>
                         OTROS INGRESOS
                     </p>
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                        @Model.ConceptoOtrosIngresosSolic<br>
                         _____________________<br>
                         CONCEPTO OTROS INGRESOS
                     </p>
@@ -693,7 +694,7 @@
                 </td>
                 <td style="width:250px;">
                     <p class="b">
-                        <br>
+                      <br>
                         _____________________<br>
                         SALDO DE HIPOTECA
                     </p>
@@ -736,7 +737,7 @@
                 </td>
                 <td style="width:30px;heith:5px;">
 
-                    <p class="solid" align="center" style="width:15px;" class="b">&nbsp;</p>
+                    <p class="solid" align="center" style="width:15px;" class="b"></p>
                 </td>
                 </td>
                 <td style="width150px;">
