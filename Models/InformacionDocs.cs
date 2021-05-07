@@ -338,6 +338,34 @@ namespace ApiCreacionDocs.Models
             public string NombreFirmaAvisoPrivacidad { get; set; }
             public string NombrePromotor { get; set; }
 
+            //Nuevos datos
+            public string bienesCasaValor { get; set; }
+            public string bienesCasaSaldoHipoteca { get; set; }
+            public string bienesCasaEmpresaFinanciadora { get; set; }
+            public string bienesCasaTelefono { get; set; }
+            public string bienesCasaValorRentaHipoteca { get; set; }
+            public string bienesAutoSiTiene { get; set; }
+            public string bienesAutoNoTiene { get; set; }
+            public string bienesAutoPropio { get; set; }
+            public string bienesAutoPagandolo { get; set; }
+            public string bienesAutoMarca { get; set; }
+            public string bienesAutoModelo { get; set; }
+            public string bienesAutoSeguroSi { get; set; }
+            public string bienesAutoSeguroNo { get; set; }
+            public string bienesAutoSaldo { get; set; }
+            public string bienesAutoMensualidad { get; set; }
+            public string bienesAutoEmpresaFinanciadora { get; set; }
+            public string bienesAutoTelefono { get; set; }
+            public string conyugeEmpleoNombreEmpresa { get; set; }
+            public string conyugeEmpleoPuesto { get; set; }
+            public string conyugeEscolaridad { get; set; }
+            public string conyugeEmpleoDomicilio { get; set; }
+            public string conyugeEmpleoJefeInmediato { get; set; }
+            public string conyugeEmpleoTelefono { get; set; }
+            public string conyugeEmpleoAntiguedad { get; set; }
+            public string conyugeEmpleoIngresosMensuales { get; set; }
+            public string conyugeEmpleoOtrosIngresos { get; set; }
+            public string conyugeEmpleoConceptoOtrosIngresos { get; set; }
 
         }
 

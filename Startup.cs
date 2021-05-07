@@ -66,7 +66,7 @@ namespace ApiCreacionDocs
             app.UseSwaggerUI(c =>
             {
                 // c.SwaggerEndpoint("AppAdministration/swagger.json", "Api Creacion Docs");
-                c.SwaggerEndpoint("AppAdministration/swagger.json", "Api Expedientes Docs");
+                c.SwaggerEndpoint("AppAdministration/swagger.json", "Api Creacion  Docs");
             });
 
             //SWAGGER

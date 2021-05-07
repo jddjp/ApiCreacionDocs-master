@@ -387,6 +387,7 @@ namespace ApiCreacionDocs.Controllers
                 content.Add(new StringContent(data.dataSolicitud.TipoExpediente), "TipoExpediente");
                 content.Add(bytes, "Documento", "Solicitud.pdf");
                 content.Add(new StringContent(data.dataSolicitud.TipoSubExpediente), "TipocSubExpediente");
+                content.Add(new StringContent("220102"), "TipocSubSubExpediente");
                 content.Add(new StringContent(data.IdentificadorTramite.ToString()), "IdExpediente");
                 content.Add(new StringContent(data.Credenciales.ToString()), "CredencialesCliente");
                 content.Add(new StringContent("2345"), "Tipo_Documento");
